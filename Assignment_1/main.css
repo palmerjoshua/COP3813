@@ -1,10 +1,4 @@
-nav {
-    padding: 5px;    
-}
 
-ul {
-    list-style-type: square;
-}
 
 h1, h2, h3 {
     text-align: center; 
@@ -43,16 +37,24 @@ h1, h2, h3 {
 p {
     text-align: justify;
 }
+
 table, td {
     width: 840px;
     padding: 1px;
     border: 1px solid black;
 }
 
-table {margin-left: 250px;}
+table {
+    margin-left: 250px;
+}
+
+ul {
+    list-style-type: square;
+}
 
 img {
-    width: 420px; height: 315px;
+    width: 420px; 
+    height: 315px;
 }
 
 footer {
