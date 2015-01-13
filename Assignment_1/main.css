@@ -2,45 +2,52 @@ h1, h2, h3, footer {
     text-align: center; 
 }
 
-header{
-    background-color: white;
-    border-radius: 10px;
-    
+header, .main_content, table {
+    -webkit-box-shadow: 2px 2px 10px 0px #C9C9C9;
+    box-shadow: 2px 2px 10px 0px #C9C9C9;
 }
 
-body{background-color: #EEEEEF;}
+header {
+    background-color: white;
+    border-radius: 10px;    
+}
+
+body {
+    background-color: #EEEEEF;
+    font-family: georgia;
+  
+}
 
 .main_content {
-    background-color: white;
-    border-radius: 10px;
-    position: relative;
+    position: relative; 
     top: 0px;
     left: 0px;
     width: 1050px;
-    height: 1250px;
+    height: 1080px;
     margin: 0 auto;
     padding: 10px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .artistBox {
     position: absolute;
     width: 500px;
-    height: 600px;
+    height: 540px;
     text-align: center;
 }
 
 #lagq {
-    top: 650px;
+    top: 550px;
 }
 
 #pj{
-    top: 650px;
-    left: 550px;
+    top: 550px;
+    left: 560px;
 }
 
 #paco {
-    left: 550px;
-
+    left: 560px;
 }
 
 .vid, img { 
@@ -49,28 +56,35 @@ body{background-color: #EEEEEF;}
     border: 0px;
 }
 
-img{border-radius: 10px;}
+img {
+    border-radius: 10px;
+}
 
-span {font-style: italic;}
+span {
+    font-style: oblique;
+}
 
 p {
     text-align: justify;
 }
 
 table, td {
-    background-color: white;
-    border-radius: 10px;
     width: 840px;
     padding: 2px;
-    
+    background-color: white;
+    border-radius: 10px;
 }
 
 table {
-    margin: 0 auto;
-    
-    
+    margin: 0 auto;   
 }
 
 ul {
     list-style-type: square;
 }
+
+/*
+Align two adjacent divs: http://stackoverflow.com/questions/17130711/how-align-2-adjacent-divs-horizontally-without-float
+Center a div horizontally: http://tutorialzine.com/2010/03/centering-div-vertically-and-horizontally/
+Box Shadow: css3generator.com
+*/
