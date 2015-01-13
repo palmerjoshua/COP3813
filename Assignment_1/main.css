@@ -1,38 +1,55 @@
-
-
-h1, h2, h3 {
+h1, h2, h3, footer {
     text-align: center; 
 }
 
+header{
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+body{background-color: #EEEEEF;}
+
 .main_content {
-     
-    margin-left: 70px;
-    margin-right: 70px;
-    padding: 5px;
-    overflow: hidden;
-    /*http://stackoverflow.com/questions/5803023/how-to-place-two-divs-next-to-each-other*/
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 1050px;
+    height: 1250px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .artistBox {
-    padding: 5px; 
+    position: absolute;
     width: 500px;
+    height: 600px;
     text-align: center;
 }
 
-#york, #lagq {
-    float: left;
-}
-/*http://stackoverflow.com/questions/5803023/how-to-place-two-divs-next-to-each-other*/
-#paco, #pj {
-    float: right;
+#lagq {
+    top: 650px;
 }
 
-.vid { 
+#pj{
+    top: 650px;
+    left: 550px;
+}
+
+#paco {
+    left: 550px;
+
+}
+
+.vid, img { 
     width: 420px;
     height: 315px;
     border: 0px;
-    position: relative;
 }
+
+img{border-radius: 10px;}
 
 span {font-style: italic;}
 
@@ -41,26 +58,19 @@ p {
 }
 
 table, td {
+    background-color: white;
+    border-radius: 10px;
     width: 840px;
-    padding: 1px;
-    border: 1px solid black;
+    padding: 2px;
+    
 }
 
 table {
-    margin-left: 250px;
-}
-
-img {
-    width: 420px; 
-    height: 315px;
+    margin: 0 auto;
+    
+    
 }
 
 ul {
     list-style-type: square;
-}
-
-
-
-footer {
-    text-align: center;
 }
