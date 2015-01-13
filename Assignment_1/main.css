@@ -83,6 +83,8 @@ ul {
     list-style-type: square;
 }
 
+a {target: "_blank";}
+
 /*
 Align two adjacent divs: http://stackoverflow.com/questions/17130711/how-align-2-adjacent-divs-horizontally-without-float
 Center a div horizontally: http://tutorialzine.com/2010/03/centering-div-vertically-and-horizontally/
