@@ -15,12 +15,17 @@ h1, h2 {
     text-shadow: 3px 2px 3px #C9C9C9;
 }
 
-.main_content, table, img {
-    width: 90%;
+.main_content {
+    width: 80%;
     margin: 0 auto;
 }
 
-td, img {height: 90%;}
+
+table{width: 75%; padding: 5px; margin: 0 auto;}
+
+td {width: 50%; height: auto;}
+
+img {height: 75%; width: 100%;}
 
 .artistBox {
     
