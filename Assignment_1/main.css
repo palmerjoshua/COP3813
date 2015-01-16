@@ -15,27 +15,6 @@ h1, h2 {
     text-shadow: 3px 2px 3px #C9C9C9;
 }
 
-.main_content {
-    width: 80%;
-    margin: 0 auto;
-}
-
-
-table{width: 75%; padding: 5px; margin: 0 auto;}
-
-td {width: 50%; height: auto;}
-
-img {height: 75%; width: 100%;}
-
-.artistBox {
-    
-    display: inline-table;
-    width: 45%;
-    height: 50%;
-    padding: 10px;
-}
-
-
 .vidWrapper{
     position: relative;
     padding-top: 56.25%;
@@ -52,11 +31,6 @@ iframe {
     height: 100%;
 }
 
-
-
-
-
-
 p, ul {
     text-align: justify;
 }
@@ -70,6 +44,50 @@ ul {
     list-style-type: square;
 }
 
+td {width: 50%; height: auto;}
+
+img {height: 75%; width: 100%;}
+
+@media screen and (min-width: 581px){
+    
+    .main_content {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    table{width: 75%; padding: 3px; margin: 0 auto;}
+
+    .artistBox {
+
+        display: inline-table;
+        width: 45%;
+        height: 50%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 580px){
+
+    .main_content {
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .artistBox{
+        display: initial;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    
+    table {
+        width: 100%;
+        padding: 3px;
+        margin: 0 auto;
+    
+    }
+
+}
 /*
     Align Two Adjacent divs: http://stackoverflow.com/questions/17130711/how-align-2-adjacent-divs-horizontally-without-float
     Center a div Horizontally: http://tutorialzine.com/2010/03/centering-div-vertically-and-horizontally/
