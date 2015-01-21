@@ -1,0 +1,19 @@
+body {
+    background-color: #EEEEEF; 
+    padding: 10px;
+}
+
+#main_content, #comparison, img, h1 {
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 10px #C9C9C9;
+    box-shadow: 5px 5px 10px #C9C9C9; 
+}
+
+p {
+    text-align: justify;
+}
+
+h1, h2, footer {
+    text-align: center;
+}

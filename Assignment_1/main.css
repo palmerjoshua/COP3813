@@ -39,9 +39,11 @@ iframe {
     height: 100%;
 }
 
-p, ul {
+p {
     text-align: justify;
 }
+
+ul {text-align: left;}
 
 span {
     font-style: oblique;
