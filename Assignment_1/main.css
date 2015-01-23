@@ -7,12 +7,12 @@ body {
 header, .main_content, table, img {
     background-color: white;
     border-radius: 10px;
-    -webkit-box-shadow: 5px 5px 10px #C9C9C9;
-    box-shadow: 5px 5px 10px #C9C9C9;   
+     -webkit-box-shadow: 1px 1px 3px #C9C9C9;
+    box-shadow: 1px 1px 1px #C9C9C9;    
 }
 
 h1, h2 {
-    text-shadow: 3px 2px 3px #C9C9C9;
+    text-shadow: 1px 1px 3px #C9C9C9;
 }
 
 .main_content, table {
