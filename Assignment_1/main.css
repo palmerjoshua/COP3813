@@ -8,7 +8,7 @@ header, .main_content, table, img {
     background-color: white;
     border-radius: 10px;
      -webkit-box-shadow: 1px 1px 3px #C9C9C9;
-    box-shadow: 1px 1px 1px #C9C9C9;    
+    box-shadow: 1px 1px 3px #C9C9C9;    
 }
 
 h1, h2 {
