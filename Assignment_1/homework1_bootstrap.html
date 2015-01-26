@@ -14,10 +14,18 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#menu').load('../inc/menu.inc.html');      
+            });
+        </script>
         <link rel="stylesheet" href="homework1_bootstrap.css">
     </head>
 
     <body>
+        
+        <div class="container-fluid" id="menu" style="width: 100%;"></div>
+        
         <h1>My Favorite Soloists and Ensembles</h1>
         <div class="container" id="main_content">
             

@@ -3,7 +3,7 @@ body {
     padding: 10px;
 }
 
-#main_content, #comparison, .img-responsive, h1 {
+#main_content, #comparison, #fluidMenu, .img-responsive, h1 {
     background-color: white;
     border-radius: 10px;
     -webkit-box-shadow: 1px 1px 3px #C9C9C9;
@@ -12,7 +12,7 @@ body {
 
 td {background-color: white;}
 
-.img-responsive {width 90%;}
+.img-responsive {width 100%;}
 
 p {
     text-align: justify;
