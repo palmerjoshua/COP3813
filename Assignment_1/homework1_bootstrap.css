@@ -10,6 +10,9 @@ body {
     box-shadow: 1px 1px 3px #C9C9C9; 
 }
 
+
+.navbar-default{margin-bottom: 0px;}
+
 td {background-color: white;}
 
 .img-responsive {width 100%;}
