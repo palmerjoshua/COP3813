@@ -1,46 +1,60 @@
-body { font-family: monospace; }
+body { 
+    font-family: monospace; 
+    color: #07173D; 
+    background-color: #EEF0F3;
+}
 
+/* Navigation Bar */
+.navbar { background-color: #07173D; }
+
+.navbar>div.container-fluid>div.navbar-header>a.navbar-brand,
+li.dropdown>a.dropdown-toggle {color: #D0D0D0;}
+
+.navbar>div.container-fluid>div.navbar-header>a.navbar-brand:hover,
+li.dropdown>a.dropdown-toggle:hover {color: #FFFFFF;}
+
+li.open>ul.dropdown-menu {background-color: #EEF0F3;}
+li.open>ul.dropdown-menu>li>a {color: #07173D;}
+li.open>ul.dropdown-menu>li>a:hover {background-color: #FFFFFF;}
+li.open>ul.dropdown-menu>li.disabled>a {color: #AAA9B0;}
+li.open>ul.dropdown-menu>li.disabled>a:hover {background-color: transparent;}
+
+
+.jumbotron { 
+    margin-bottom: 0; 
+    padding-left: 10px; 
+    background-color: #7383A7;
+}
+
+/* Email & GitHub Links */
+.iconLink { color: #000208; }
+.iconLink:hover { color: #EEF0F3; }
+
+/* Email Dialog Box */
+.ui-widget { font-family: monospace; background-color: #EEF0F3; padding: 0; margin: 0;}
+.ui-widget-content, div#dialog{ background-color: #EEF0F3; margin: inherit;}
+.ui-widget-header {background: #07173D no-repeat; color: #D0D0D0;}
+.ui-widget-header>button{display: none;}
+.ui-dialog-buttonpane {margin: inherit; padding: inherit;}
+
+/* Resume Tabs */
+.nav-tabs>li>a, .nav-tabs>li>a:hover, .nav-tabs>li>a:focus {color: #07173D;}
+.nav-tabs>li.active>a, .nav-tabs>li>a:hover, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #07173D;
+    font-weight: bold; 
+    background-color: white; 
+    border-color: lightgray;
+}
+
+/* Resume Content */
 dt, dd { padding: 2px; }
-
-#resumeRow, #menu { background-color: #F2F5FF; }
-
 #resumeRow {
     padding-bottom: 10px; 
     padding-top: 10px;
 }
-
-#menu, .jumbotron { border-bottom: 1px solid lightgray; }
-
-.jumbotron { margin-bottom: 0; padding-left: 10px; }
-
-.tab-content { background-color: white; } 
-
-div[role="tabpanel"] {
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-}
-
-.nav-tabs>li>a {
-    background-color: #eeeeee;
-    border-color: lightgray;
-    color: #777777;
-}
-
-.nav-tabs>li>a:hover {
-    border-color: lightgray;
-    background-color: white;
-}
-
-.nav-tabs>li.active>a, 
-.nav-tabs>li.active>a:hover, 
-.nav-tabs>li.active>a:focus {font-weight: bold;}
-
-.iconLink { color: black; }
-
-.iconLink:hover { color: lightgray; }
-
-.ui-widget { font-family: monospace; }
-
-.ui-widget-content{ background-color: white; }
-    
+div.tab-pane {
+    background-color: #FFFFFF;
+    border-left: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}  
