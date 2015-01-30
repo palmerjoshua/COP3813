@@ -5,103 +5,141 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Resume</title>
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+               
+        <!-- jQuery -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
         
+        <!-- jQuery UI -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+        
+        <!-- Bootstrap JavaScript -->
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
+        <!-- Insert navbar into page -->
         <script type="text/javascript">
             $(document).ready(function(){
-                $('#menu').load('../inc/menu.inc.html');      
+                $('#menu').load('../inc/menu.inc.html');
             });      
         </script>
+        
+        <!-- My custom CSS -->
+        <link rel="stylesheet" type="text/css" href="main.css">
+        
+        <title>Resume</title>
     </head>
 
     <body>
         
-        <div class="container-fluid" id="menu"></div>
-        <div class="alert alert-info" role="alert">This page is still under construction.</div>
-        <div class="container"> <!-- TABS CONTAINER -->        
-            <div class="jumbotron">
-                <h1> My Resume</h1>                    
-            </div>            
-            
-            <!-- NAV TABS -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#skills" aria-controls="skills" role="tab" data-toggle="tab">Skills</a></li>
-              <li role="presentation"><a href="#education" aria-controls="education" role="tab" data-toggle="tab">Education</a></li>
-              <li role="presentation"><a href="#work" aria-controls="work" role="tab" data-toggle="tab">Work</a></li>
-            </ul> <!-- NAV TABS -->
-
-            <!-- TAB PANES -->
-            <div class="tab-content">
-                
-                <!-- SKILLS PANE -->
-                <div role="tabpanel" class="tab-pane fade in active" id="skills"> 
-
-                    <dl>
-                        <dt>Language Proficiency</dt>
-                        <dd>- C/C++</dd>
-                        <dd>- Python</dd>
-                        <dd>- HTML5/CSS/Javascript</dd>
-
-                        <dt>Other Skills</dt>
-                        <dd>- Operating Systems: Linux, OS X, Windows</dd>
-                        <dd>- IDE: MS Visual Studio, IDLE, Eclipse, Geany</dd>
-                        <dd>- Version Control: Git</dd>
-
-                        <dt>Personal Projects</dt>
-                        <dd>- (Python) Wrote a program that converts to/from binary, octal, decimal, and hexadecimal numbers and displays the written work for each step.</dd>
-                        <dd>- (Python) Wrote a data analysis program using data from reddit.com</dd>                    
-                    </dl>            
-                </div> <!-- SKILLS PANE -->
-
-                <!-- EDUCATION PANE -->
-                <div role="tabpanel" class="tab-pane fade" id="education"> 
-                    <dl>
-                        <dt>Degrees</dt>
-                        <dd>- B.S. in Computer Science, Florida Atlantic University (in progress)</dd>
-                        <dd>- A.A. in Philosophy, Broward College (2011 - 2013)</dd>
-                        
-                        <dt>GPA</dt>
-                        <dd>- CS courses: 3.9</dd>
-                        <dd>- Cumulative: 3.3</dd>
-
-                        <dt>Relevant Coursework</dt>
-                        <dd>- Intro to Database Structures</dd>
-                        <dd>- Intro to Internet Computing</dd>
-                        <dd>- Data Structures (C++)</dd>
-                        <dd>- Intro to Microprocessors</dd>
-                        <dd>- Logic Design</dd>           
-                    </dl>           
-                </div> <!-- EDUCATION PANE -->
-
-                <!-- WORK PANE -->
-                <div role="tabpanel" class="tab-pane fade" id="work">
-                    <dl>
-                        <dt>Freelance Writer</dt>
-                        <dd>- BACM Consultants, Inc.</dd>
-                        <dd>- November 2012 - February 2013</dd>
-                        <dd>- Helped write and plan content for the company's new website and newsletters.</dd>
-
-                        <dt>Sales Associate</dt>
-                        <dd>- Ghost Armor</dd>
-                        <dd>- June 2012 - November 2012</dd>
-                        <dd>- Sold cell phone screen/body protectors.</dd>
-
-                        <dt>Guitar and Keyboard Instructor</dt>
-                        <dd>- New York Music Academy (Sunrise, FL)</dd>
-                        <dd>- February 2006 - August 2009</dd>
-                        <dd>- Taught private lessons and large group lessons.</dd>               
-                    </dl>           
-                </div> <!-- WORK PANE -->
-                
-            </div> <!-- TAB PANES -->
-        </div> <!-- TABS CONTAINER -->
+        <!-- Alerts -->
+        <noscript>
+            <div class="alert alert-danger" role="alert">
+                This page requires Javascript to display a navigation bar and to display my email address using the envelope icon.
+            </div>
+        </noscript>
         
+        <!-- Contains navbar on page load -->
+        <div class="container-fluid" id="menu"></div>
+        
+        <!-- Contains dialog box for email link -->
+        <div id="dialog" title="My Email"></div>
+        
+        <div class="jumbotron">
+            <h1>My Resume</h1>            
+            
+            <p> <!-- SUBHEADING -->
+                Musician. Writer. Developer.
+                <a href="#" id="dialogOpener" class="iconLink" title="My Email">
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true" title="My Email" id="emailIcon"></span>
+                </a>
+                <a href="https://github.com/palmerjoshua/COP3813" target="_blank" class="iconLink" title="GitHub">
+                    <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+                </a>
+            </p> <!-- SUBHEADING -->
+            
+            <!--Obfuscates my email address...hopefully-->
+            <script type="text/javascript" src="../js/egen.js"></script>  
+        </div><!--JUMBOTRON-->        
+        
+        <div class="container-fluid">                  
+            <div class="row" id="resumeRow">           
+                <div class="col-md-1"></div> <!-- SPACER -->
+                
+                <div class="col-md-10"><!-- MIDDLE COLUMN -->                 
+                    <!-- NAV TABS -->
+                    <ul class="nav nav-tabs nav-justified" role="tablist">
+                      <li role="presentation" class="active"><a href="#skills" aria-controls="skills" role="tab" data-toggle="tab">Skills</a></li>
+                      <li role="presentation"><a href="#education" aria-controls="education" role="tab" data-toggle="tab">Education</a></li>
+                      <li role="presentation"><a href="#work" aria-controls="work" role="tab" data-toggle="tab">Work</a></li>
+                    </ul> <!-- NAV TABS -->
+
+                    <!-- TAB PANES -->
+                    <div class="tab-content">
+                        <!-- SKILLS PANE -->
+                        <div role="tabpanel" class="tab-pane fade in active" id="skills"> 
+                            <dl>
+                                <dt>Language Proficiency</dt>
+                                <dd>- C/C++</dd>
+                                <dd>- Python</dd>
+                                <dd>- HTML5/CSS/Javascript</dd>
+
+                                <dt>Other Skills</dt>
+                                <dd>- Operating Systems: Linux, OS X, Windows</dd>
+                                <dd>- IDE: MS Visual Studio, IDLE, Eclipse, Geany</dd>
+                                <dd>- Version Control: Git</dd>
+
+                                <dt>Personal Projects</dt>
+                                <dd>- (Python) Wrote a program that converts to/from binary, octal, decimal, and hexadecimal numbers and displays the written work for each step.</dd>
+                                <dd>- (Python) Wrote a data analysis program using data from reddit.com</dd>                    
+                            </dl>            
+                        </div> <!-- SKILLS PANE -->
+
+                        <!-- EDUCATION PANE -->
+                        <div role="tabpanel" class="tab-pane fade" id="education"> 
+                            <dl>
+                                <dt>Degrees</dt>
+                                <dd>- B.S. in Computer Science, Florida Atlantic University (in progress)</dd>
+                                <dd>- A.A. in Philosophy, Broward College (2011 - 2013)</dd>
+
+                                <dt>GPA</dt>
+                                <dd>- Cumulative: 3.3</dd>
+                                <dd>- CS courses: 3.9</dd>
+                                
+                                <dt>Relevant Coursework</dt>
+                                <dd>- Intro to Database Structures</dd>
+                                <dd>- Intro to Internet Computing</dd>
+                                <dd>- Data Structures (C++)</dd>
+                                <dd>- Intro to Microprocessors</dd>
+                                <dd>- Logic Design</dd>           
+                            </dl>           
+                        </div> <!-- EDUCATION PANE -->
+
+                        <!-- WORK PANE -->
+                        <div role="tabpanel" class="tab-pane fade" id="work">
+                            <dl>
+                                <dt>Freelance Writer</dt>
+                                <dd>- BACM Consultants, Inc.</dd>
+                                <dd>- November 2012 - February 2013</dd>
+                                <dd>- Helped write and plan content for the company's website and newsletters.</dd>
+
+                                <dt>Sales Associate</dt>
+                                <dd>- Ghost Armor</dd>
+                                <dd>- June 2012 - November 2012</dd>
+                                <dd>- Sold cell phone screen/body protectors.</dd>
+
+                                <dt>Guitar and Keyboard Instructor</dt>
+                                <dd>- New York Music Academy (Sunrise, FL)</dd>
+                                <dd>- February 2006 - August 2009</dd>
+                                <dd>- Taught private lessons and large group lessons.</dd>               
+                            </dl>           
+                        </div> <!-- WORK PANE -->                     
+                    </div> <!-- TAB PANES -->               
+                </div> <!-- MIDDLE COLUMN -->
+                
+                <div class="col-md-1"></div> <!-- SPACER -->                      
+            </div> <!-- ROW -->           
+        </div> <!-- CONTAINER -->           
     </body>
 </html>

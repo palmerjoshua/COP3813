@@ -1,0 +1,46 @@
+body { font-family: monospace; }
+
+dt, dd { padding: 2px; }
+
+#resumeRow, #menu { background-color: #F2F5FF; }
+
+#resumeRow {
+    padding-bottom: 10px; 
+    padding-top: 10px;
+}
+
+#menu, .jumbotron { border-bottom: 1px solid lightgray; }
+
+.jumbotron { margin-bottom: 0; padding-left: 10px; }
+
+.tab-content { background-color: white; } 
+
+div[role="tabpanel"] {
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.nav-tabs>li>a {
+    background-color: #eeeeee;
+    border-color: lightgray;
+    color: #777777;
+}
+
+.nav-tabs>li>a:hover {
+    border-color: lightgray;
+    background-color: white;
+}
+
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:hover, 
+.nav-tabs>li.active>a:focus {font-weight: bold;}
+
+.iconLink { color: black; }
+
+.iconLink:hover { color: lightgray; }
+
+.ui-widget { font-family: monospace; }
+
+.ui-widget-content{ background-color: white; }
+    

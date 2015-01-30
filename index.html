@@ -8,17 +8,30 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         
+        <!-- Insert navbar on page load -->
         <script type="text/javascript">
             $(document).ready(function(){$('#menu').load('inc/menu.inc.html');});
         </script>
                 
     </head>
     
-    <body>
+    <body style="font-family: monospace;">
+        
+        <!-- Contain navbar on page load -->
         <div class="container-fluid" id="menu"></div>
+        
+        <!-- Alerts -->
         <div class="alert alert-info" role="alert">This page is still under construction (navigation works).</div>
-        <div class="jumbotron">
+        <noscript>
+            <div class="alert alert-danger" role="alert">
+                This page requires Javascript to display a navigation bar. Without Javascript, you can't see the rest of my site!
+            </div>
+        </noscript>
+        
+        <!-- Main content -->
+        <div class="jumbotron">            
             <h1 style="text-align: center;">Welcome.</h1>
         </div>
+        
     </body>
 </html>
