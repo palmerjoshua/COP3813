@@ -1,6 +1,5 @@
 /* 
-    I really hope putting my email address in a dialog like this
-    will prevent spam bots from getting it...
+    Obfuscate email address, prevent spam (hopefully)
 */
 
 function myad() {
