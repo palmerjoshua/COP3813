@@ -5,8 +5,8 @@
 
 function myad() {
     var a = 'pa'+'lmerjos'+'hua201',
-        b = '3@fau',
-        c = '.edu';   
+        b = '3&#64fau',
+        c = '&#46edu';   
     return a+b+c;
 } // weak obfuscation...we'll see what happens
 
