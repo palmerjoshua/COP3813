@@ -1,7 +1,7 @@
 <!-- opening tags and global links -->
-<?php require($_SERVER["DOCUMENT_ROOT"]. "~palmerjoshua2013/inc/header.php"); ?> 
+<?php require("/~palmerjoshua2013/inc/header.php"); ?> 
 <!-- body starts here -->
-<?php require($_SERVER["DOCUMENT_ROOT"]."~palmerjoshua2013/inc/mid.php"); ?>    
+<?php require("/~palmerjoshua2013/inc/mid.php"); ?>    
 
 
 <!-- Alerts -->
@@ -13,4 +13,4 @@
 </div>
         
 <!-- body starts here -->
-<?php require($_SERVER["DOCUMENT_ROOT"]."~palmerjoshua2013/inc/footer.php"); ?>
+<?php require("/~palmerjoshua2013/inc/footer.php"); ?>
