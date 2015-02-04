@@ -1,11 +1,11 @@
 <!-- opening tags and global links -->
-<?php require($_SERVER["DOCUMENT_ROOT"]."~palmerjoshua2013/inc/header.php"); ?>
+<?php require($_SERVER["DOCUMENT_ROOT"]."/~palmerjoshua2013/inc/header.php"); ?>
 
 <!-- custom links -->
 <link rel="stylesheet" type="text/css" href="main.css">
 
 <!-- body starts here -->
-<?php require($_SERVER["DOCUMENT_ROOT"]."~palmerjoshua2013/inc/mid.php"); ?>
+<?php require($_SERVER["DOCUMENT_ROOT"]."/~palmerjoshua2013/inc/mid.php"); ?>
         
 
 <!-- Contains dialog box for email link -->
@@ -108,4 +108,4 @@
 </div> <!-- CONTAINER -->
 
 <!-- closing body and html tags -->
-<?php require($_SERVER["DOCUMENT_ROOT"]."~palmerjoshua2013/inc/footer.php"); ?>
+<?php require($_SERVER["DOCUMENT_ROOT"]."/~palmerjoshua2013/inc/footer.php"); ?>

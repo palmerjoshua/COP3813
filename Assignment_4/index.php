@@ -1,10 +1,10 @@
 <!-- opening tags and global links -->
-<?php require("/~palmerjoshua2013/inc/header.php"); ?>
+<?php require($_SERVER["DOCUMENT_ROOT"]. "/~palmerjoshua2013/inc/header.php"); ?>
 <!-- custom links -->
 
 
 <!-- end custom links -->
-<?php require("/~palmerjoshua2013/inc/mid.php"); ?> 
+<?php require($_SERVER["DOCUMENT_ROOT"]."/~palmerjoshua2013/inc/mid.php"); ?> 
 <!-- body -->
 
 <div class="alert alert-info" role="alert">This page is under construcion (needs styling, but app works).</div>
@@ -37,4 +37,4 @@
 
 
 <!-- end body -->
-<?php require("/~palmerjoshua2013/inc/footer.php"); ?>
+<?php require($_SERVER["DOCUMENT_ROOT"]."/~palmerjoshua2013/inc/footer.php"); ?>
