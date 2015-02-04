@@ -56,7 +56,7 @@
                         <dd>- Version Control: Git</dd>
 
                         <dt>Personal Projects</dt>
-                        <dd>- (Python) Wrote a program that converts to/from binary, octal, decimal, and hexadecimal numbers and displays the written work for each step.</dd>
+                        <dd>- (Python/Javascript) Wrote a program that converts to/from binary, octal, decimal, and hexadecimal numbers and displays the written work for each step.</dd>
                         <dd>- (Python) Wrote a data analysis program using data from reddit.com</dd>                    
                     </dl>            
                 </div> <!-- SKILLS PANE -->
