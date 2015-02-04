@@ -1,5 +1,5 @@
 <!-- opening tags and global links -->
-<?php require($_SERVER["DOCUMENT_ROOT"]. "/inc/header.php"); ?>
+<?php require($_SERVER["DOCUMENT_ROOT"]. "inc/header.php"); ?>
 <!-- custom links -->
 
 
@@ -7,6 +7,12 @@
 <?php require($_SERVER["DOCUMENT_ROOT"]."inc/mid.php"); ?> 
 <!-- body -->
 
+<div class="alert alert-info" role="alert">This page is under construcion (needs styling, but app works).</div>
+
+<div class="jumbotron">
+    <h2>Number Converter</h2>
+    <p>This Javascript application converts a positive integer's base and shows all the written work.</p>  
+</div>
 
 <form>
     <h4>Starting Base</h4>
