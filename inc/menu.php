@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/~palmerjoshua2013/index.html">Joshua Palmer</a>
+            <a class="navbar-brand" href="/index.php">Joshua Palmer</a>
             <!-- SWITCH BEFORE SENDING TO PRODUCTION -->
         </div>
 
@@ -19,11 +19,11 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments<span class="caret"></span></a>                  
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuDivider">
                         <!--~palmerjoshua2013/-->
-                        <li><a href="/~palmerjoshua2013/Assignment_1/index.html">Homework 1</a></li>
+                        <li><a href="/Assignment_1/index.html">Homework 1</a></li>
                         <!-- SWITCH BEFORE SENDING TO PRODUCTION -->
-                        <li><a href="/~palmerjoshua2013/Assignment_2/index.html">Homework 2</a></li>
+                        <li><a href="/Assignment_2/index.php">Homework 2</a></li>
                         <li class="disabled"><a href="#">Homework 3</a></li>
-                        <li class="disabled"><a href="#">Homework 4</a></li>
+                        <li><a href="/Assignment_4/index.php">Homework 4</a></li>
                         <li class="disabled"><a href="#">Homework 5</a></li>
                         <li class="disabled"><a href="#">Homework 6</a></li>
                         <li class="disabled"><a href="#">Homework 7</a></li>

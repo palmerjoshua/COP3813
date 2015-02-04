@@ -5,9 +5,9 @@ body {
 }
 
 /* Navigation Bar */
-.navbar { background-color: #07173D; }
+.navbar-inverse { background-color: #07173D; background-image: none;}
 
-.navbar>div.container-fluid>div.navbar-header>a.navbar-brand,
+.navbar-inverse>div.container-fluid>div.navbar-header>a.navbar-brand,
 li.dropdown>a.dropdown-toggle {color: #D0D0D0;}
 
 .navbar>div.container-fluid>div.navbar-header>a.navbar-brand:hover,
@@ -15,9 +15,9 @@ li.dropdown>a.dropdown-toggle:hover {color: #FFFFFF;}
 
 li.open>ul.dropdown-menu {background-color: #EEF0F3;}
 li.open>ul.dropdown-menu>li>a {color: #07173D;}
-li.open>ul.dropdown-menu>li>a:hover {background-color: #FFFFFF;}
+li.open>ul.dropdown-menu>li>a:hover {background-color: #FFFFFF; font-weight: bold;}
 li.open>ul.dropdown-menu>li.disabled>a {color: #AAA9B0;}
-li.open>ul.dropdown-menu>li.disabled>a:hover {background-color: transparent;}
+li.open>ul.dropdown-menu>li.disabled>a:hover {background-color: transparent; font-weight: normal;}
 
 
 .jumbotron { 

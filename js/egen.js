@@ -1,11 +1,12 @@
 /* 
-    Obfuscate email address, prevent spam (hopefully)
+    I really hope putting my email address in a dialog like this
+    will prevent spam bots from getting it...
 */
 
 function myad() {
     var a = 'pa'+'lmerjos'+'hua201',
-        b = '3&#64;fau',
-        c = '&#46;edu';   
+        b = '3@fau',
+        c = '.edu';   
     return a+b+c;
 } // weak obfuscation...we'll see what happens
 
