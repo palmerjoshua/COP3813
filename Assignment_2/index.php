@@ -1,25 +1,18 @@
 <!-- opening tags and global links -->
-<<<<<<< HEAD
-<?php require($_SERVER["DOCUMENT_ROOT"]."/~palmerjoshua2013/inc/header.php"); ?>
-=======
 <?php require("../inc/header.php"); ?>
->>>>>>> d77dda2
-
 <!-- custom links -->
+
 <link rel="stylesheet" type="text/css" href="main.css">
 
-
+<!-- end custom links -->
 <?php require("../inc/mid.php"); ?>
-<!-- body starts here -->
-<<<<<<< HEAD
-<?php require($_SERVER["DOCUMENT_ROOT"]."/~palmerjoshua2013/inc/mid.php"); ?>
-        
-=======
+<!-- body -->
+
 
 <div id="menu">
     <?php require("../inc/menu.php"); ?>
 </div>        
->>>>>>> d77dda2
+
 
 <!-- Contains dialog box for email link -->
 <div id="dialog" title="My Email"></div>
@@ -120,9 +113,6 @@
     </div> <!-- ROW -->           
 </div> <!-- CONTAINER -->
 
-<!-- closing body and html tags -->
-<<<<<<< HEAD
-<?php require($_SERVER["DOCUMENT_ROOT"]."/~palmerjoshua2013/inc/footer.php"); ?>
-=======
+<!-- end body -->
 <?php require("../inc/footer.php"); ?>
->>>>>>> d77dda2
+
