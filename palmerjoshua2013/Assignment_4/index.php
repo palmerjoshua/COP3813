@@ -1,18 +1,14 @@
 <!-- opening tags and global links -->
-<<<<<<< HEAD
-<?php require($_SERVER["DOCUMENT_ROOT"]. "/~palmerjoshua2013/inc/header.php"); ?>
-=======
+
 <?php require("../inc/header.php"); ?>
->>>>>>> d77dda2
+
 <!-- custom links -->
 
 
 <!-- end custom links -->
-<<<<<<< HEAD
-<?php require($_SERVER["DOCUMENT_ROOT"]."/~palmerjoshua2013/inc/mid.php"); ?> 
-=======
+
 <?php require("../inc/mid.php"); ?> 
->>>>>>> d77dda2
+
 <!-- body -->
 
 <div id="menu">
@@ -89,8 +85,6 @@
 
 
 <!-- end body -->
-<<<<<<< HEAD
-<?php require($_SERVER["DOCUMENT_ROOT"]."/~palmerjoshua2013/inc/footer.php"); ?>
-=======
+
 <?php require("../inc/footer.php"); ?>
->>>>>>> d77dda2
+
