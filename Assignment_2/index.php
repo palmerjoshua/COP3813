@@ -1,5 +1,7 @@
 <!-- opening tags and global links -->
+
 <?php require("../inc/header.php"); ?>
+
 <!-- custom links -->
 
 <link rel="stylesheet" type="text/css" href="main.css">
@@ -7,7 +9,6 @@
 <!-- end custom links -->
 <?php require("../inc/mid.php"); ?>
 <!-- body -->
-
 
 <div id="menu">
     <?php require("../inc/menu.php"); ?>
@@ -113,6 +114,8 @@
     </div> <!-- ROW -->           
 </div> <!-- CONTAINER -->
 
+
 <!-- end body -->
+
 <?php require("../inc/footer.php"); ?>
 
