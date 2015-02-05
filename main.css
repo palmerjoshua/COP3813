@@ -27,6 +27,9 @@ li.open>ul.dropdown-menu>li.disabled>a:hover {background-color: transparent;}
 
 }
 
+a[title='GitHub'] {color: white;}
+a[title='GitHub']:hover {color: #777;}
+
 .jumbotron > p.text-muted {
     font-size: small;
 }
