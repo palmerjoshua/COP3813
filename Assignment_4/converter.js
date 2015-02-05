@@ -49,15 +49,16 @@ function validInput(){
 // create output to be loaded into html
 function output(){
     
-    var output = "<p>";
+    var output ="";
     
     if(validInput()){
-        output += "Start: "+startNumber+"    End: "+endNumber+"<br>";
-        output += toDec() + "<br>";
-        output += fromDec() + "<br></p>";
+        output += "<p class='text-primary'>";
+        output += "Start: "+startNumber+"    End: "+endNumber+"<br><br>";
+        output += toDec() + "<br><br>";
+        output += fromDec() + "<br>";
     }
     else{
-        output = "INVALID INPUT";
+        output = "<p class='text-danger'>INVALID INPUT</p>";
     }
     return output;
 }
@@ -88,7 +89,7 @@ function toDec() {
         }
     }
     result += (endBase == 10) ? endNumber : parseInt(endNumber, endBase);
-    return result;
+    return "To Decimal:<br>" + result;
 }
 
 //show work for converting FROM base-10
@@ -117,7 +118,7 @@ function fromDec() {
 
         end = remainder + end;
     }
-    return result;
+    return "From Decimal:<br>" + result;
 }
 
 
@@ -144,6 +145,6 @@ $("#submit").click(function(e){
 
     convert();
    
-    $('#output').html(output());
+    $('output').html(output());
     
 });
