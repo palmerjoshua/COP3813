@@ -148,3 +148,16 @@ $("#submit").click(function(e){
     $('output').html(output());
     
 });
+
+/* DIRECTIONS TOGGLE */
+$('#dirButton').click(function(){
+    $(this).toggleClass("btn-info");
+    if($(this).hasClass("btn-info")) {
+        $('#buttonText').text("Close");
+    }
+    else {
+        $('#buttonText').text("Directions");
+    }
+       
+
+});

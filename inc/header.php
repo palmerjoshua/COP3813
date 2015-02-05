@@ -9,10 +9,10 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 
         <!-- Bootstrap JavaScript -->
-        <script type="text/javascript" src="/palmerjoshua2013/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 
         <!-- ADD '~' to username for production -->
         
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" type="text/css" href="/palmerjoshua2013/css/bootstrap.min.css" >
-        <link rel="stylesheet" type="text/css" href="/palmerjoshua2013/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" >
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
