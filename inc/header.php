@@ -10,8 +10,6 @@
 
         <!-- Bootstrap JavaScript -->
         <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-
-        <!-- ADD '~' to username for production -->
         
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" >
