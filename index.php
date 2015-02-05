@@ -1,8 +1,11 @@
 <!-- opening tags and global links -->
-<?php require($_SERVER["DOCUMENT_ROOT"]. "/inc/header.php"); ?> 
+<?php require("inc/header.php"); ?> 
 <!-- body starts here -->
-<?php require($_SERVER["DOCUMENT_ROOT"]."inc/mid.php"); ?>    
+<?php require("inc/mid.php"); ?>    
 
+<div id="menu">
+    <?php require("inc/menu.php"); ?>
+</div>
 
 <!-- Alerts -->
 <div class="alert alert-info" role="alert">This page is still under construction (navigation works).</div>
@@ -13,4 +16,4 @@
 </div>
         
 <!-- body starts here -->
-<?php require($_SERVER["DOCUMENT_ROOT"]."inc/footer.php"); ?>
+<?php require("inc/footer.php"); ?>

@@ -1,12 +1,16 @@
 <!-- opening tags and global links -->
-<?php require($_SERVER["DOCUMENT_ROOT"]."inc/header.php"); ?>
+<?php require("../inc/header.php"); ?>
 
 <!-- custom links -->
 <link rel="stylesheet" type="text/css" href="main.css">
 
+
+<?php require("../inc/mid.php"); ?>
 <!-- body starts here -->
-<?php require($_SERVER["DOCUMENT_ROOT"]."inc/mid.php"); ?>
-        
+
+<div id="menu">
+    <?php require("../inc/menu.php"); ?>
+</div>        
 
 <!-- Contains dialog box for email link -->
 <div id="dialog" title="My Email"></div>
@@ -108,4 +112,4 @@
 </div> <!-- CONTAINER -->
 
 <!-- closing body and html tags -->
-<?php require($_SERVER["DOCUMENT_ROOT"]."inc/footer.php"); ?>
+<?php require("../inc/footer.php"); ?>
