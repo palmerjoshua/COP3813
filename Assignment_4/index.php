@@ -60,11 +60,16 @@
                 <span class="input-group-btn">
                     <button id="submit" class="btn btn-primary" type="submit">Convert</button>
                 </span>
-
             </div>    
             <br>            
             
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#appInfo" aria-expanded="false" aria-controls="appInfo" id="dirButton"><span id="buttonText">Directions</span></button>
+            <div class="btn-group" role="group" aria-label="...">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#appInfo" aria-expanded="false" aria-controls="appInfo" id="dirButton"><span id="buttonText">Directions</span></button>
+                <button id="clear" class="btn btn-primary" type="button">Clear</button>    
+            
+            </div>
+            
+            
             
             <div class="collapse" id="appInfo">
                 <label for="ol[id='directions']"><h4 class="text-primary">Directions</h4></label>
