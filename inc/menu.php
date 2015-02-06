@@ -40,7 +40,7 @@
                         <li class="disabled"><a href="#">Project 2</a></li>
                     </ul>                  
                 </li> <!-- PROJECTS -->
-                
+                <li><a href="https://github.com/palmerjoshua/COP3813" title="GitHub" target="_blank">Code</a></li>
             </ul>
         </div><!-- navbar -->        
     </div><!-- container-fluid -->
