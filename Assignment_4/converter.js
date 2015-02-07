@@ -144,6 +144,8 @@ $("#submit").click(function(e){
     
 });
 
+
+/* CLEAR OUTPUT */
 $('#clear').click(function(){
     $('output').html('');
     $('input[class="form-control"]').val('');
@@ -151,7 +153,7 @@ $('#clear').click(function(){
 });
 
 
-/* DIRECTIONS TOGGLE */
+/* TOGGLE DIRECTIONS */
 $('#dirButton').click(function(){
     $(this).toggleClass("btn-info");
     
