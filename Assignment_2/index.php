@@ -5,7 +5,7 @@
 <!-- custom links -->
 
 <link rel="stylesheet" type="text/css" href="main.css">
-
+<title>R&#233sum&#233</title>
 <!-- end custom links -->
 <?php require("../inc/mid.php"); ?>
 <!-- body -->

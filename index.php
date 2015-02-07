@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" type="text/css" href="main.css">
 
-
+<title>Joshua Palmer</title>
 <!-- end custom links -->
 <?php require("inc/mid.php"); ?>    
 <!-- body -->

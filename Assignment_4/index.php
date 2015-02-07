@@ -3,7 +3,7 @@
 <!-- custom links -->
 
 <link rel="stylesheet" type="text/css" href="main.css">
-
+<title>Converter</title>
 <!-- end custom links -->
 <?php require("../inc/mid.php"); ?> 
 
