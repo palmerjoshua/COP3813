@@ -20,9 +20,9 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
         
-        <div class="col-md-4">       
+        <div class="col-md-3">       
             <form class="form-inline" role="form">
                 <div class="form-group">                  
                     <label for="[name='Starting Base']">Starting Base</label>
@@ -92,11 +92,12 @@
             </div><!-- appInfo -->    
         </div>        
         
-        <div class="col-md-4"> 
+        <div class="col-md-1"></div> <!-- spacer column -->
+        <div class="col-md-5"> 
             <output></output>        
         </div>
         
-        <div class="col-md-2"></div> <!-- spacer column -->
+
     </div> <!-- row -->   
 </div> <!-- container -->
 <script type="text/javascript" src="converter.js"></script>
