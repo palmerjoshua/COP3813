@@ -1,4 +1,4 @@
-// globals hold the values from the html form
+// hold html form data
 var startBase, endBase, 
     startNumber, endNumber;
 
@@ -9,9 +9,9 @@ function reverseString(str) {
     return str.split("").reverse().join("");
 }
 
-// determine whether a character is a letter
+// determine whether a character is a hex letter
 function isLetter(item){
-    return (item >= 'A' && item <= 'Z') || (item >= 'a' && item <= 'z');
+    return (item >= 'A' && item <= 'F');
 }
 
 // force uppercase letters in hexadecimal numbers
@@ -26,22 +26,21 @@ function upperHex() {
 
 // validate user input
 function validInput(){
-    if(startNumber < 0 || !startNumber){return false;}
-    if(!endNumber){return false;}
     
-    var bits = startNumber.split(""),
-        length = bits.length;
-    
-    for(i = 0; i < length; i++){
-        if(startBase != 16 && isLetter(bits[i])){
+    if(startNumber < 0 || !startNumber){
+        return false;
+    }
+      
+    for(i = 0; i < startNumber.length; i++){
+        if(isNaN(startNumber[i]) && !isLetter(startNumber[i])) {
+            return false;
+        }
+        if(startBase != 16 && isLetter(startNumber[i])){
             return false;
         } 
-        if(startBase == 2 && bits[i] > 1){
+        if(startBase == 2 && startNumber[i] > 1){
             return false;
-        }
-        if(startBase == 16 && isLetter(bits[i]) && (bits[i] > 'F' || bits[i] > 'f')){
-            return false;
-        }
+        }       
     }
     return true;
 }
@@ -49,10 +48,10 @@ function validInput(){
 // create output to be loaded into html
 function output(){
     
-    var output ="";
+    var output;
     
     if(validInput()){
-        output += "<p class='text-primary'>";
+        output = "<p class='text-primary'>";
         output += "Start: "+startNumber+"    End: "+endNumber+"<br><br>";
         output += toDec() + "<br><br>";
         output += fromDec() + "<br>";
@@ -81,12 +80,8 @@ function toDec() {
         bit = parseInt(start[i], 16);
 
         result += value + '(' + bit + ') ';
-
-        if (i > 0) {
-            result += '+ ';
-        } else {
-            result += '= ';
-        }
+        
+        result += (i > 0) ? '+ ' : '= ';
     }
     result += (endBase == 10) ? endNumber : parseInt(endNumber, endBase);
     return "To Decimal:<br>" + result;
@@ -111,11 +106,11 @@ function fromDec() {
         remainder = dividend % divisor;
 
         result += dividend + ' / ' + divisor + ' = ' + quotient + ' R' + remainder + '<br>';
+        
         dividend = quotient;
         if (endBase == 16) {
             remainder = remainder.toString(16).toUpperCase();        
         }
-
         end = remainder + end;
     }
     return "From Decimal:<br>" + result;
