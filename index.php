@@ -20,9 +20,7 @@
 <div class="jumbotron">            
     <h1 style="text-align: center;">COP 3813 </h1>
     <h2>Introduction to Internet Computing</h2>
-    <p>Assignments and projects from the Spring 2015 Semester</p>
+    <p>Assignments and projects from the Spring 2015 Semester</p>      
 </div>
-
-
 <!-- end body -->
 <?php require("inc/footer.php"); ?>
