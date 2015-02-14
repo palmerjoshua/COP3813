@@ -83,11 +83,6 @@ function reset(){
 }
 
 
-function sanitize(){
-    
-
-}
-
 $('#Reset').click(function(){
     reset();   
 });
