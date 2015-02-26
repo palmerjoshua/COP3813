@@ -16,7 +16,7 @@
                 <div class="form-group">
                     
                     <label for="Headline">Headline</label>
-                    <input type="text" class="form-control" id="Headline" placeholder="Headline" required>
+                    <input type="text" class="form-control" id="Headline" placeholder="Headline" maxlength="25" required>
                     
                     <label for="TextArea">Text</label>
                     <textarea class="form-control" id="TextArea" style="max-width: 100%; max-height: 76px;" maxlength="140" placeholder="140 characters"></textarea>
@@ -25,45 +25,45 @@
                    <input type="file" id="ChoosePicture">
                     
                 </div>
-                
-                <div class="form-group" role="group">
-                                      
-                    <label for="brightness">Brightness</label>
-                    <input type="range" class="slider" id="brightness" value="100" step="1" min="0" max="200">
-
-                    <label for="contrast">Contrast</label>
-                    <input type="range" class="slider" id=contrast value="100" step="1" min="0" max="200">
-
-                    <label for="saturate">Saturation</label>
-                    <input type="range" class="slider" id="saturate" value="100" step="1" min="0" max="200">
-                    
-                    <label for="hue-rotate">Hue</label>
-                    <input type="range" class="slider" id="hue-rotate" value="0" step="1" min="-360" max="360">
-                                         
-                    <label for="grayscale">Grayscale</label>
-                    <input type="range" class="slider" id="grayscale" value="0" step="1" min="0" max="100">
-                    
-                    <label for="sepia">Sepia</label>
-                    <input type="range" class="slider" id="sepia" value="0" step="1" min="0" max="100">
-                                 
-                    <label for="invert">Invert</label>
-                    <input type="range" class="slider" id="invert" value="0" step="1" min="0" max="100">
+                       
+            </form> 
+            
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-primary" id="grayscale">Grayscale</button>
+                <button type="button" class="btn btn-primary" id="sepia">Sepia</button>
+                <button type="button" class="btn btn-primary" id="invert">Invert</button>
+            </div>
+            
+            <form>
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="brightness">Brightness</label>
+                        <input type="range" class="slider" id="brightness" value="1.45" step="0.05" min="0.05" max="3">
+                        
+                        <label for="contrast">Contrast</label>
+                        <input type="range" class="slider" id="contrast" value="1" step="0.05" min="0" max="5">
+                    </div>
                     
                 </div>
                 <div class="btn-group" role="group" aria-label="...">
-                    <button type="reset" class="btn btn-primary" id="Reset">Reset</button>
-                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-                    
+                    <button type="reset" class="btn btn-primary" id="reset">Reset</button>
+                    <button type="button" class="btn btn-primary" id="addtext">Add Text</button>
                 </div>
-            </form>      
+            </form>
+            
+            
+            
+            
         </div>
         
         <div class="col-sm-8">
-          
-            <!-- testing with background image of another page -->
-            <img id="output" src="../img/main_background.jpg" alt="img">
-            <!-- in main.css ==> width: 100%; height: auto; -->
-            <output><h3></h3><p></p></output>
+            <canvas id='postcard' width="720" height="360"></canvas>
+            <output>
+                <p id='currentfilter'></p>
+                <p id='lastfilter'></p>
+                <p id='beforestate'></p>
+                
+            </output>
         </div>       
     </div>
 </div>
