@@ -86,6 +86,29 @@ var functions = {
             data[i+2] = clamp(blue);
         }
         putData(imgdata);       
+    },
+    
+    onecolor: function(offset, value){
+        var imgdata = imageData(),
+            data = imgdata.data;
+        
+        for(var i=0; i<data.length; i += 4){
+            var red = data[i+offset]*value;
+            data[i+offset] = clamp(red);
+        }
+        putData(imgdata);
+    },
+    
+    'red': function(value){
+        this.onecolor(0, value);    
+    },
+    
+    'green': function(value){
+        this.onecolor(1, value);
+    },
+    
+    'blue': function(value){
+        this.onecolor(2, value);
     }
 };
 
@@ -135,42 +158,34 @@ function clamp(value){
     return (value <= 255 && value >= 0) ? value : ((value > 255) ? 255 : 0);
 }
 
+function apply(){
+    putData(original);
+    for(var filter in filters){
+        functions[filter](filters[filter]);
+    }
+}
 
 function update(name, value){
-    switch(name){// button filters don't layer
+    switch(name){
+    // button filters don't layer
         case 'grayscale':
-            if('sepia' in filters){
-                delete filters['sepia'];
-            }
-            if('invert' in filters){
-                delete filters['invert'];
-            }
+            delete filters['sepia'];
+            delete filters['invert'];       
             break;
         case 'sepia':
-            if('grayscale' in filters){
-                delete filters['grayscale'];
-            }
-            if('invert' in filters){
-                delete filters['invert'];
-            }
+            delete filters['grayscale'];
+            delete filters['invert'];
             break;
         case 'invert':
-            if('sepia' in filters){
-                delete filters['sepia'];
-            }
-            if('grayscale' in filters){
-                delete filters['grayscale'];
-            }
+            delete filters['sepia'];
+            delete filters['grayscale'];
         default:
             break;
     }
     
     
     filters[name] = value;
-    putData(original);
-    for(var filter in filters){
-        functions[filter](filters[filter]);
-    }
+    apply();
 }
 
 
@@ -193,41 +208,16 @@ $('#reset').click(function(){
 });
 
 
-$('#brightness').change(function(){ 
-    
-    var name = $(this).attr('id'),
-        value = $(this).val();
-
-    update(name, value);    
-});
-
-
-$('#contrast').change(function(){
-    var name = $(this).attr('id'),
-        value = $(this).val();
-
-    update(name, value);   
-});
-
-
-$('#grayscale').click(function(){
+$('.btn-default').click(function(){
     var name = $(this).attr('id');
-
-    update(name, null);   
-});
-
-
-$('#invert').click(function(){
-    var name = $(this).attr('id');
-
-    update(name, null);  
- });
-
-
-$('#sepia').click(function(){
-    var name = $(this).attr('id');
-
     update(name, null);
+});
+
+$('.slider').change(function(){
+    var name = $(this).attr('id'),
+        value = $(this).val();
+
+    update(name, value);
 });
 
 

@@ -29,9 +29,9 @@
             </form> 
             
             <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-primary" id="grayscale">Grayscale</button>
-                <button type="button" class="btn btn-primary" id="sepia">Sepia</button>
-                <button type="button" class="btn btn-primary" id="invert">Invert</button>
+                <button type="button" class="btn btn-default" id="grayscale">Grayscale</button>
+                <button type="button" class="btn btn-default" id="sepia">Sepia</button>
+                <button type="button" class="btn btn-default" id="invert">Invert</button>
             </div>
             
             <form>
@@ -42,6 +42,15 @@
                         
                         <label for="contrast">Contrast</label>
                         <input type="range" class="slider" id="contrast" value="1" step="0.05" min="0" max="5">
+                        
+                        <label for="red">R</label>
+                        <input type="range" class="slider" id="red" value="1" step="0.05" min="0" max="5">
+                        
+                        <label for="green">G</label>
+                        <input type="range" class="slider" id="green" value="1" step="0.05" min="0" max="5">
+                        
+                        <label for="blue">B</label>
+                        <input type="range" class="slider" id="blue" value="1" step="0.05" min="0" max="5">
                     </div>
                     
                 </div>
