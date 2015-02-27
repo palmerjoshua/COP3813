@@ -1,16 +1,16 @@
 var imagesource = '../img/main_background.jpg',
     canvas = document.getElementById('postcard'),
-    context = canvas.getContext('2d');
+    context = canvas.getContext('2d'),
+    imageData = function(){
+        return context.getImageData(0, 0, canvas.width, canvas.height);
+    };
 
-var imageData = function(){return context.getImageData(0, 0, canvas.width, canvas.height);}
-
-var original = null;
-
-var filters = {};
+var original = headline = body = null,
+    textwritten = false,
+    filters = {};
 
 var functions = {
-    
-    
+       
     'grayscale': function(value){
         
         var imgdata = imageData(),
@@ -88,27 +88,35 @@ var functions = {
         putData(imgdata);       
     },
     
+    
     onecolor: function(offset, value){
         var imgdata = imageData(),
             data = imgdata.data;
         
         for(var i=0; i<data.length; i += 4){
-            var red = data[i+offset]*value;
-            data[i+offset] = clamp(red);
+            var color = data[i+offset]*value;
+            data[i+offset] = clamp(color);
         }
         putData(imgdata);
     },
+    
     
     'red': function(value){
         this.onecolor(0, value);    
     },
     
+    
     'green': function(value){
         this.onecolor(1, value);
     },
     
+    
     'blue': function(value){
-        this.onecolor(2, value);
+        this.onecolor(2, value);       
+    },
+    
+    'alpha': function(value){
+        this.onecolor(3, value);
     }
 };
 
@@ -142,14 +150,19 @@ function putData(imgdata){
 }
 
 
-function addText(heading, body){
+function addText(){
     // needs work for text placement
-    var headingfont = "50px Georgia",
+    var headlinefont = "50px Georgia",
         bodyfont = "20px Georgia";
-    context.font = headingfont;
-    context.fillText(heading, 50, 50);
+    
+    putData(original);
+    apply();
+    
+    context.font = headlinefont;
+    context.fillText(headline, 50, 50);
     context.font = bodyfont;
     context.fillText(body, 50, 100);
+    textwritten = true;
 }
 
 
@@ -158,12 +171,14 @@ function clamp(value){
     return (value <= 255 && value >= 0) ? value : ((value > 255) ? 255 : 0);
 }
 
+
 function apply(){
     putData(original);
     for(var filter in filters){
         functions[filter](filters[filter]);
     }
 }
+
 
 function update(name, value){
     switch(name){
@@ -190,9 +205,9 @@ function update(name, value){
 
 
 $('#addtext').click(function(){
-    var headline = $('#Headline').val(),
-        body = $('#TextArea').val();
-    addText(headline, body);
+    headline = $('#Headline').val();
+    body = $('#TextArea').val();
+    addText();
 });
 
 
@@ -204,20 +219,34 @@ $('#ChoosePicture').change(function(){
 $('#reset').click(function(){
     putData(original);
     filters = {};
-    $('p').text('');
+    textwritten = false;
+    headline = body = false;
 });
 
 
 $('.btn-default').click(function(){
     var name = $(this).attr('id');
     update(name, null);
+    if(textwritten){
+        addText();
+    }
 });
+
 
 $('.slider').change(function(){
     var name = $(this).attr('id'),
         value = $(this).val();
-
     update(name, value);
+    if(textwritten){
+        addText();
+    }
+}).mousemove(function(){
+    var name = $(this).attr('id'),
+        value = $(this).val();
+    update(name, value);
+    if(textwritten){
+        addText();
+    }
 });
 
 
