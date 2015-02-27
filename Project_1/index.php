@@ -57,6 +57,7 @@
                 <div class="btn-group" role="group" aria-label="...">
                     <button type="reset" class="btn btn-primary" id="reset">Reset</button>
                     <button type="button" class="btn btn-primary" id="addtext">Add Text</button>
+                    <a id='downloadlink' download="canvasimg.png" class="btn btn-primary">Save Image</a>
                 </div>
                 
             </form>           

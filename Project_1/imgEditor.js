@@ -7,8 +7,10 @@ var imagesource = '../img/main_background.jpg',
 
 var original = headline = body = null,
     textwritten = false,
-    filters = {};
+    filters = {}; 
 
+
+/* FILTER FUNCTIONS */
 var functions = {
        
     'grayscale': function(value){
@@ -121,20 +123,7 @@ var functions = {
 };
 
 
-function uploadImage(input){
-
-    if(input.files && input.files[0]){
-    
-        var reader = new FileReader();
-        reader.onload = function(e){
-            imagesource = e.target.result;
-            newCanvasImage(imagesource);
-        }
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-
-
+/* HELPER FUNCTIONS */
 function newCanvasImage(source){
     var image = new Image();
     image.src = source;
@@ -147,28 +136,6 @@ function newCanvasImage(source){
 
 function putData(imgdata){
     context.putImageData(imgdata, 0, 0);
-}
-
-
-function addText(){
-    // needs work for text placement
-    var headlinefont = "50px Georgia",
-        bodyfont = "20px Georgia";
-    
-    putData(original);
-    apply();
-    
-    context.font = headlinefont;
-    context.fillText(headline, 50, 50);
-    context.font = bodyfont;
-    context.fillText(body, 50, 100);
-    textwritten = true;
-}
-
-
-function clamp(value){
-// keep value in interval [0,255]    
-    return (value <= 255 && value >= 0) ? value : ((value > 255) ? 255 : 0);
 }
 
 
@@ -203,6 +170,52 @@ function update(name, value){
     apply();
 }
 
+
+function addText(){
+    // needs work for text placement
+    var headlinefont = "50px Georgia",
+        bodyfont = "20px Georgia";
+    
+    putData(original);
+    apply();
+    
+    context.font = headlinefont;
+    context.fillText(headline, 50, 50);
+    context.font = bodyfont;
+    context.fillText(body, 50, 100);
+    textwritten = true;
+}
+
+
+function uploadImage(input){
+
+    if(input.files && input.files[0]){
+    
+        var reader = new FileReader();
+        reader.onload = function(e){
+            imagesource = e.target.result;
+            newCanvasImage(imagesource);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+
+function download(){
+    this.href = canvas.toDataURL('image/png');
+}
+
+
+function clamp(value){
+// keep value in interval [0,255]    
+    return (value <= 255 && value >= 0) ? value : ((value > 255) ? 255 : 0);
+}
+
+
+
+/* EVENT HANDLERS */
+
+document.getElementById('downloadlink').addEventListener('click', download, false);
 
 $('#addtext').click(function(){
     headline = $('#Headline').val();
@@ -240,14 +253,14 @@ $('.slider').change(function(){
     if(textwritten){
         addText();
     }
-}).mousemove(function(){
+})/*.mousemove(function(){
     var name = $(this).attr('id'),
         value = $(this).val();
     update(name, value);
     if(textwritten){
         addText();
     }
-});
+})*/;
 
 
 $(document).ready(function(){
