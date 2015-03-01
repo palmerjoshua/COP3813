@@ -16,10 +16,10 @@
                 <div class="form-group">
                     
                     <label for="Headline">Headline</label>
-                    <input type="text" class="form-control" id="Headline" placeholder="Headline" maxlength="25" required>
+                    <input type="text" class="form-control" id="Headline" placeholder="Headline (20 chars)" maxlength="20" required>
                     
                     <label for="TextArea">Text</label>
-                    <textarea class="form-control" id="TextArea" style="max-width: 100%; max-height: 76px;" maxlength="140" placeholder="140 characters"></textarea>
+                    <textarea class="form-control" id="TextArea" style="max-width: 100%; max-height: 76px;" maxlength="800" placeholder="Body (800 chars)"></textarea>
                     
                     <label for="ChoosePicture">Upload an Image</label>
                    <input type="file" id="ChoosePicture">

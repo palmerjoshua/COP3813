@@ -178,11 +178,35 @@ function addText(){
     
     putData(original);
     apply();
-    
+                
     context.font = headlinefont;
-    context.fillText(headline, 50, 50);
+    context.fillText(headline, 50, 50);  
+    
     context.font = bodyfont;
-    context.fillText(body, 50, 100);
+    
+    var x = 50; 
+    var y = 100;
+    
+    var maxwidth = canvas.width - 100;
+    var measure = context.measureText("M");
+    var lineheight = Math.ceil(measure.width);
+    var words = body.split(' ');
+    var line = '';
+    
+    for(var n=0; n<words.length; n++){
+        var testline = words[n] + ' ';
+       
+        if(context.measureText(line+testline).width < maxwidth){
+            line += testline;
+        }else{
+            context.fillText(line, x, y);
+            line = testline;
+            y += lineheight;        
+        }
+    }
+    if(line.length > 0){
+        context.fillText(line, x, y);
+    }
     textwritten = true;
 }
 
@@ -202,6 +226,7 @@ function uploadImage(input){
 
 
 function download(){
+    this.download = Math.random().toString(36).slice(2,8);
     this.href = canvas.toDataURL('image/png');
 }
 
