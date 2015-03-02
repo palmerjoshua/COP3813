@@ -1,12 +1,11 @@
 var imagesource = '../img/main_background.jpg',
     canvas = document.getElementById('postcard'),
-    context = canvas.getContext('2d'),
-    imageData = function(){
-        return context.getImageData(0, 0, canvas.width, canvas.height);
-    };
+    context = canvas.getContext('2d');
 
 var original = headline = body = null,
+    textcolor = '#000000',
     textwritten = false,
+    firload = true,
     filters = {}; 
 
 
@@ -117,6 +116,7 @@ var functions = {
         this.onecolor(2, value);       
     },
     
+    
     'alpha': function(value){
         this.onecolor(3, value);
     }
@@ -124,13 +124,33 @@ var functions = {
 
 
 /* HELPER FUNCTIONS */
+
+
+function imageData(){
+    return context.getImageData(0, 0, canvas.width, canvas.height);
+}
+
+
 function newCanvasImage(source){
     var image = new Image();
     image.src = source;
     image.onload = function(){
         context.drawImage(image,0,0, image.width, image.height, 0,0, canvas.width, canvas.height);
         original = imageData();
+        if(firload){
+            firstload();
+            firload = false;
+        }
     };
+}
+
+
+function firstload(){
+    headline = "imgEditor.js";
+    body = "Welcome! This is a simple image editor I created using Javascript and the HTML canvas. Instead of merely changing the image's CSS, this application manipulates the image's pixel values. To get started, click 'Reset' or upload a picture of your own!";
+    textwritten = true;
+    update('alpha', 0.5);
+    addText();
 }
 
 
@@ -164,46 +184,50 @@ function update(name, value){
         default:
             break;
     }
-    
-    
+        
     filters[name] = value;
     apply();
 }
 
 
 function addText(){
-    // needs work for text placement
     var headlinefont = "50px Georgia",
         bodyfont = "20px Georgia";
     
+    // apply filters first
     putData(original);
     apply();
-                
+    
+    context.fillStyle = textcolor;
+    
+    // add headline
     context.font = headlinefont;
     context.fillText(headline, 50, 50);  
     
     context.font = bodyfont;
     
-    var x = 50; 
-    var y = 100;
+    var x = 50, 
+        y = 100;
     
-    var maxwidth = canvas.width - 100;
-    var measure = context.measureText("M");
-    var lineheight = Math.ceil(measure.width);
-    var words = body.split(' ');
-    var line = '';
+    // apply line wrapping to body
+    var maxwidth = canvas.width - 100,
+        measure = context.measureText("M"),
+        lineheight = Math.ceil(measure.width) + 1,
+        words = body.split(' '),
+        line = '';
     
-    for(var n=0; n<words.length; n++){
-        var testline = words[n] + ' ';
+    for(var i=0; i<words.length; i++){
+        var currentline = words[i] + ' ';
        
-        if(context.measureText(line+testline).width < maxwidth){
-            line += testline;
+        if(context.measureText(line+currentline).width < maxwidth){
+            line += currentline;
         }else{
             context.fillText(line, x, y);
-            line = testline;
+            line = currentline;
             y += lineheight;        
         }
     }
+    
     if(line.length > 0){
         context.fillText(line, x, y);
     }
@@ -212,9 +236,7 @@ function addText(){
 
 
 function uploadImage(input){
-
-    if(input.files && input.files[0]){
-    
+    if(input.files && input.files[0]){   
         var reader = new FileReader();
         reader.onload = function(e){
             imagesource = e.target.result;
@@ -226,6 +248,7 @@ function uploadImage(input){
 
 
 function download(){
+    // downloaded img gets unique name
     this.download = Math.random().toString(36).slice(2,8);
     this.href = canvas.toDataURL('image/png');
 }
@@ -237,31 +260,47 @@ function clamp(value){
 }
 
 
+function clear(){
+    filters = {};
+    headline = body = null;
+    textwritten = false;   
+}
+
 
 /* EVENT HANDLERS */
 
+// save image button
 document.getElementById('downloadlink').addEventListener('click', download, false);
 
+
+// add text button
 $('#addtext').click(function(){
     headline = $('#Headline').val();
     body = $('#TextArea').val();
+    
+    var color = $('#cptextinput').val();
+    
+    textcolor = (color != '') ? color : '#000000';
+    
     addText();
 });
 
 
+// file upload
 $('#ChoosePicture').change(function(){
     uploadImage(this);
+    clear();
 });
 
 
+// reset button
 $('#reset').click(function(){
     putData(original);
-    filters = {};
-    textwritten = false;
-    headline = body = false;
+    clear();
 });
 
 
+// grayscale, sepia, invert buttons
 $('.btn-default').click(function(){
     var name = $(this).attr('id');
     update(name, null);
@@ -271,6 +310,7 @@ $('.btn-default').click(function(){
 });
 
 
+// brightness, contrast, RGBA sliders
 $('.slider').change(function(){
     var name = $(this).attr('id'),
         value = $(this).val();
@@ -278,16 +318,9 @@ $('.slider').change(function(){
     if(textwritten){
         addText();
     }
-})/*.mousemove(function(){
-    var name = $(this).attr('id'),
-        value = $(this).val();
-    update(name, value);
-    if(textwritten){
-        addText();
-    }
-})*/;
+});
 
 
 $(document).ready(function(){
-    newCanvasImage(imagesource);  
+    newCanvasImage(imagesource);    
 });
