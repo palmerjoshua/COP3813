@@ -22,8 +22,11 @@
                     
                     <label for="TextArea">Body</label>
                     <textarea class="form-control" id="TextArea" style="max-width: 100%; max-height: 76px;" maxlength="500" placeholder="(500 characters)"></textarea>
-                    <label for="cptextinput">Text Color</label>
+                    <label for="textcolor">Text Color</label>
+                    <input type="color" class="form-control" id='textcolor' value="#000000">
+                    <!-- 
                     <input type="text" class="form-control" id='cptextinput' placeholder="('red', '#000000', #eee)" aria-label="...">
+                    -->
                 </div>
                 
                             

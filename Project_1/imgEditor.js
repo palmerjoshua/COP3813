@@ -273,15 +273,18 @@ function clear(){
 document.getElementById('downloadlink').addEventListener('click', download, false);
 
 
+$('#textcolor').change(function(){
+    textcolor = $(this).val();
+    if(textwritten){
+        addText();
+    }
+});
+
+
 // add text button
 $('#addtext').click(function(){
     headline = $('#Headline').val();
-    body = $('#TextArea').val();
-    
-    var color = $('#cptextinput').val();
-    
-    textcolor = (color != '') ? color : '#000000';
-    
+    body = $('#TextArea').val();   
     addText();
 });
 

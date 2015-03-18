@@ -1,0 +1,15 @@
+.list-group-item > .glyphicon {
+    float: right;
+}
+
+.list-group-item:hover {
+    background-color: aliceblue;
+}
+
+body{
+    background: url(https://i.imgur.com/0pP5DQn.jpg) no-repeat center center fixed;
+}
+
+.navbar{
+    border-radius: 0px;
+}

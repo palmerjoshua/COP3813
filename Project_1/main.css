@@ -1,6 +1,22 @@
 canvas{
-
     width: 100%;
     height: auto;
-
 }
+
+.navbar-inverse {
+    background:  rgba(0,0,0,0.9);
+    border-radius: 0px;
+    
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar .navbar-nav .open {background-color: transparent;}
+li.open>ul.dropdown-menu {background-color: rgba(0,0,0,0.7);}
+li.open>ul.dropdown-menu>li>a {color: white;}
+li.open>ul.dropdown-menu>li>a:hover {background: rgba(0,0,0,0.5); }
+li.open>ul.dropdown-menu>li.disabled>a {color: #AAA9B0;}
+li.open>ul.dropdown-menu>li.disabled>a:hover {background-color: transparent;}
