@@ -1,0 +1,10 @@
+body{
+    background: url(http://i.imgur.com/IbXuDq4.jpg) no-repeat center center fixed;
+    background-size: 100% auto;
+}
+
+#inputdiv, #outputdiv, .jumbotron{
+    background-color: #FFFFFF;
+    padding: 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+}

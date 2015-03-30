@@ -24,10 +24,8 @@
                         <li><a href="/~palmerjoshua2013">Homework 3</a></li>
                         <li><a href="/~palmerjoshua2013/Assignment_4">Homework 4</a></li>
                         <li><a href="/~palmerjoshua2013/Assignment_5">Homework 5</a></li>
-                        <li class="disabled"><a href="#">Homework 6</a></li>
-                        <li class="disabled"><a href="#">Homework 7</a></li>
-                        <li role="presentation" class="divider"></li>
-                        <li><a href="http://palmerjoshua.blogspot.com" target="_blank">Fun Assignment</a></li>            
+                        <li><a href="/~palmerjoshua2013/Assignment_5">Homework 6</a></li>
+                        <li class="disabled"><a href="#">Homework 7</a></li>            
                     </ul>                    
                 </li> <!-- ASSIGNMENTS -->
                 
