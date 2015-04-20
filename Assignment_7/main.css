@@ -1,0 +1,37 @@
+p 
+{
+    word-wrap: break-word;
+}
+
+.panel-primary>.panel-heading
+{
+    background-color: black;
+    background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+}
+.panel-primary, .panel-primary>.panel-heading
+{
+    border-color: black;
+}
+
+.panel-info>.panel-heading
+{
+    background-color: silver;
+    background-image: linear-gradient(to bottom,#c0c0c0 0,#fff 100%);
+    color: black;
+}
+.panel-info, .panel-info>.panel-heading
+{
+    border-color: silver;
+}
+
+textarea
+{
+    max-width: 100%;
+    max-height: 10em;
+}
+
+.previewimg
+{
+    width: 300px;
+    height: auto;
+}
